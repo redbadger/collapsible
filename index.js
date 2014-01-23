@@ -16,14 +16,11 @@ removeClass = function(ele, cls){
 };
 module.exports = function(target, klass){
   var d, collapse, i$, len$, el, results$ = [];
-  console.log('hello');
   klass == null && (klass = '');
   d = dom(target);
   collapse = d.find('.collapse-toggle');
-  console.log(collapse);
   for (i$ = 0, len$ = collapse.length; i$ < len$; ++i$) {
     el = collapse[i$];
-    console.log(el);
     results$.push(event.bind(el, "click", fn$));
   }
   return results$;
@@ -31,7 +28,6 @@ module.exports = function(target, klass){
     var collapsible;
     e.preventDefault;
     collapsible = d.find(e.target.getAttribute("data-collapse"));
-    console.log(collapsible);
     if (collapsible[0]) {
       if (collapsible[0].style.display === 'block') {
         collapsible[0].style.display = 'none';
