@@ -21,10 +21,11 @@ removeClass = function(ele, cls){
   }
 };
 
-module.exports = function(target, klass) {
+module.exports = function(target, collapsedClass, expandedClass) {
   var d, collapse, i$, len$, el, results$ = [];
 
-  klass == null && (klass = '');
+  collapsedClass == null && (collapsedClass = '');
+  expandedClass == null && (expandedClass = '');
   d = dom(target);
 
   collapse = d.find('.collapse-toggle');
@@ -42,10 +43,12 @@ module.exports = function(target, klass) {
     if (collapsible[0]) {
       if (collapsible[0].style.display === 'block') {
         collapsible[0].style.display = 'none';
-        return addClass(e.target, klass);
+        removeClass(e.target, expandedClass);
+        return addClass(e.target, collapsedClass);
       } else {
         collapsible[0].style.display = 'block';
-        return removeClass(e.target, klass);
+        removeClass(e.target, collapsedClass);
+        return addClass(e.target, expandedClass);
       }
     }
   }

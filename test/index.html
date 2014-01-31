@@ -19,6 +19,10 @@
       .collapsed {
         background-color: green;
       }
+
+      .expanded {
+        background-color: violet;
+      }
       #collapsible-container {
         border: 1px solid black;
         display: none;
@@ -51,7 +55,7 @@
     <script src="../build/build.js"></script>
     <script>
       var Collapsible = require('collapsible');
-      Collapsible('body', 'collapsed');
+      Collapsible('body', 'collapsed', 'expanded');
     </script>
   </body>
 </html>
