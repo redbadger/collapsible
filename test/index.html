@@ -4,9 +4,17 @@
     <title>Collapsible component</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
+      body {
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+      }
       h3 {
         background-color: blue;
         color: white;
+        cursor: pointer;
+        margin-bottom: 0;
+        padding: 10px;
       }
       .collapsed {
         background-color: green;
@@ -15,17 +23,31 @@
         border: 1px solid black;
         display: none;
       }
+
+      #collapsible-container2 {
+        border: 1px solid black;
+        display: block;
+      }
     </style>
   </head>
   <body>
-    <h2>Collapsible</h2>
+    <div>
+      <h3 class="collapse-toggle" data-collapse="#collapsible-container">Clickable title</h3>
+      <div id="collapsible-container">
+        <p>Content to be collapsed</p>
+        <img src="http://placekitten.com/100/100">
+      </div>
 
-    <h3 class="collapse-toggle" data-collapse="#collapsible-container">Clickable title</h3>
-    <div id="collapsible-container">
-      <p>Content to be collapsed</p>
-      <img src="http://placekitten.com/100/100">
+      <h3 class="collapse-toggle" data-collapse="#collapsible-container2">Clickable title 2</h3>
+      <div id="collapsible-container2">
+        <p>Content to be collapsed 2</p>
+        <img src="http://placekitten.com/100/100">
+      </div>
+
+      <div>
+
+      </div>
     </div>
-
     <script src="../build/build.js"></script>
     <script>
       var Collapsible = require('collapsible');
