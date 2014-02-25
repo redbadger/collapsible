@@ -2,7 +2,7 @@
   "name": "collapsible",
   "repo": "redbadger/collapsible",
   "description": "Twitter Bootstrap -like collapsible effect for elements",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "keywords": [
     "collapse"
   ],
