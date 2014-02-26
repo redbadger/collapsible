@@ -13,7 +13,7 @@ This is a component component. You can easily plug it into your site or web app.
 * Run `component build`
 * Now you can open test/index.html and if everything is fine you should be able to see the component in action
 
-If your app already uses components, you can simply run `component install redbadger/datepicker` - this will fetch and install all dependencies into /components folder of your project.
+If your app already uses components, you can simply run `component install redbadger/collapsible` - this will fetch and install all dependencies into /components folder of your project.
 
 ##Usage
 
