@@ -13,7 +13,7 @@ removeClass = (ele, cls) ->
       ele.className = ele.className.replace reg, ' '
 
 
-module.exports = (target, klass = '') ->
+module.exports = (target, klass = 'collapsed') ->
   d = dom target
 
   collapse = d.find '.collapse-toggle'
@@ -22,11 +22,7 @@ module.exports = (target, klass = '') ->
       e.prevent-default
       collapsible = d.find e.target.get-attribute "data-collapse"
       if collapsible.0
-        if collapsible.0.style.display is 'block'
-          collapsible.0.style.display = 'none'
-          addClass e.target, klass
+        if hasClass collapsible.0, klass
+          removeClass collapsible.0, klass
         else
-          collapsible.0.style.display = 'block'
-          removeClass e.target, klass
-
-
+          addClass collapsible.0, klass
